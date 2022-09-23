@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
 import DropdownMenu from '../DropdownMenu';
 
 import { Container, ProfileMenu } from './styles';
 
 export default function Header() {
-  const [isDropdownMenuOpened, setIsDropdownMenuOpened] = useState(true);
+  const [isDropdownMenuOpened, setIsDropdownMenuOpened] = useState(false);
 
   return (
     <Container>
@@ -16,15 +18,16 @@ export default function Header() {
 
       <div className="profile-menus">
         <ProfileMenu isOpened={isDropdownMenuOpened}>
-          <button
+          <motion.button
             type="button"
             onClick={() => setIsDropdownMenuOpened((prevState) => !prevState)}
+            whileTap={{ scale: 0.85 }}
           >
             <h2>Luís Felipe</h2>
             <div className="icons">
               <FiChevronDown id="icon" size={28} />
             </div>
-          </button>
+          </motion.button>
           <DropdownMenu isOpened={isDropdownMenuOpened} />
         </ProfileMenu>
         <button

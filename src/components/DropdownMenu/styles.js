@@ -19,7 +19,7 @@ export const Overlay = styled.div`
 
 export const Container = styled.div`
   position: fixed;
-  right: 160px;
+  /* right: 160px; */
   min-width: 200px;
   padding: 10px 0;
 
@@ -51,10 +51,11 @@ export const Container = styled.div`
     }
   }
 
-  ${({ isOpened }) => !isOpened && css`
+  /* ${({ isOpened }) => !isOpened && css`
     opacity: 0;
     pointer-events: none;
-  `}
+  `} */
+
 `;
 
 export const Separator = styled.div`
