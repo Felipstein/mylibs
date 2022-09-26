@@ -22,6 +22,7 @@
         "linebreak-style": "off",
         "import/prefer-default-export": "off",
         "react/no-unknown-property": "off",
-        " import/no-extraneous-dependencies": "off"
+        " import/no-extraneous-dependencies": "off",
+        "react/jsx-no-bind": "off"
     }
 }

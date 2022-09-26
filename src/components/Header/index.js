@@ -28,7 +28,10 @@ export default function Header() {
               <FiChevronDown id="icon" size={28} />
             </div>
           </motion.button>
-          <DropdownMenu isOpened={isDropdownMenuOpened} />
+          <DropdownMenu
+            isOpened={isDropdownMenuOpened}
+            handleClose={() => setIsDropdownMenuOpened(false)}
+          />
         </ProfileMenu>
         <button
           type="button"
