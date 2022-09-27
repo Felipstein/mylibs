@@ -1,28 +1,12 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
+import DropdownItem from './DropdownItem';
+
 import {
-  Container, Backdrop, Separator, DropShadow,
+  Container, Backdrop, DropShadow,
 } from './styles';
 
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 300,
-      damping: 24,
-    },
-  },
-  close: {
-    opacity: 0,
-    y: 20,
-    transition: {
-      duration: 0.2,
-    },
-  },
-};
 export default function DropdownMenu({ isOpened, handleClose }) {
   return (
     <>
@@ -54,54 +38,26 @@ export default function DropdownMenu({ isOpened, handleClose }) {
           }}
         >
           <nav>
-            <motion.a
-              href="/"
-              variants={itemVariants}
-            >
+            <DropdownItem>
               Item 1
-            </motion.a>
-            <motion.a
-              href="/"
-              variants={itemVariants}
-            >
+            </DropdownItem>
+            <DropdownItem>
               Item 2
-            </motion.a>
-            <motion.a
-              href="/"
-              variants={itemVariants}
-            >
+            </DropdownItem>
+            <DropdownItem>
               Item 3
-            </motion.a>
-          </nav>
-          <Separator
-            as={motion.div}
-            variants={itemVariants}
-          />
-          <nav>
-            <motion.a
-              href="/"
-              variants={itemVariants}
-            >
+            </DropdownItem>
+            <DropdownItem separator />
+            <DropdownItem>
               Item 4
-            </motion.a>
-            <motion.a
-              href="/"
-              variants={itemVariants}
-            >
+            </DropdownItem>
+            <DropdownItem>
               Item 5
-            </motion.a>
-          </nav>
-          <Separator
-            as={motion.div}
-            variants={itemVariants}
-          />
-          <nav>
-            <motion.a
-              href="/"
-              variants={itemVariants}
-            >
+            </DropdownItem>
+            <DropdownItem separator />
+            <DropdownItem>
               Item 6
-            </motion.a>
+            </DropdownItem>
           </nav>
         </Container>
       </DropShadow>
